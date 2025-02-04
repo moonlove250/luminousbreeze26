@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For Binodini ❤️</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: url('https://example.com/path-to-your-moon-image.jpg') no-repeat center center fixed;
+            background-size: cover;
+            text-align: center;
+            padding: 20px;
+            display: none;
+        }
+        .container {
+            max-width: 600px;
+            margin: auto;
+            background: rgba(255, 255, 255, 0.8);  /* Slight transparency for the container */
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+        }
+        h1 {
+            color: #d63384;
+        }
+        .countdown {
+            font-size: 18px;
+            color: #444;
+        }
+        .message {
+            font-size: 20px;
+            color: #222;
+            margin-top: 20px;
+        }
+        .footer {
+            margin-top: 30px;
+            font-size: 14px;
+            color: #777;
+        }
+        .valentine {
+            font-size: 22px;
+            color: #d63384;
+            margin-top: 30px;
+            font-weight: bold;
+        }
+        #passwordPrompt {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+        #passwordInput {
+            padding: 10px;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="passwordPrompt">
+        <h2>Enter Password</h2>
+        <input type="password" id="passwordInput" placeholder="Enter Password">
+        <button onclick="checkPassword()">Submit</button>
+    </div>
+    
+    <div class="container" id="mainContent">
+        <h1>For My Love, Binodini ❤️</h1>
+        <p class="countdown">Approximate Time Left Until We Meet: <span id="countdown"></span></p>
+        <p class="message">Though miles apart, my heart is always with you. Every moment we spend waiting brings us closer to our forever. I love you! 💖</p>
+        <p class="message">From West Bengal to Punjab, our love knows no distance. One day, our wait will be over. Until then, you live in my heart every single moment. ❤️</p>
+        <p class="message">Teri haar ek baat mei kuch khaas hai...<br>
+        Teri muskurahat mei mera raaz hai...<br>
+        Jab tu paas ho dil ki dhadkan tez ho jati hai...<br>
+        Jab tu mere sath ho waqt ruk saa jata hai...<br>
+        Teri har ek muskurahat, meri duniya mein rang laata hai.<br>
+        Teri yaado se jeeta hu, teri khushbu mei dooba hu...<br>
+        Tere bina sab kuch adhura sa lagta hai...<br>
+        Buis tujhise pura sa lagta hai.</p>
+        <p class="valentine">Binodini, will you be my Valentine? 💕</p>
+        <div class="footer">Forever Yours, Binod</div>
+    </div>
+
+    <script>
+        function countdown() {
+            const approxYears = 5;
+            const today = new Date();
+            const targetDate = new Date(today.getFullYear() + approxYears, today.getMonth(), today.getDate()).getTime();
+            
+            setInterval(function() {
+                const now = new Date().getTime();
+                const distance = targetDate - now;
+                const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                document.getElementById("countdown").innerText = days + " days";
+            }, 1000);
+        }
+
+        function checkPassword() {
+            const password = "binodini2025";  // Set your secret password here
+            const input = document.getElementById("passwordInput").value;
+            if (input === password) {
+                document.getElementById("passwordPrompt").style.display = "none";
+                document.body.style.display = "block";
+                countdown();
+            } else {
+                alert("Incorrect password! Try again.");
+            }
+        }
+    </script>
+</body>
+</html>
